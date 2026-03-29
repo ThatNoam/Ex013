@@ -38,5 +38,27 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-
+    public void clicked(View view)
+    {
+        if (sw.isChecked())
+        {
+            if (b1.isChecked())
+            {
+                layout.setBackgroundColor(Color.RED);
+            }
+            else if (b2.isChecked())
+            {
+                layout.setBackgroundColor(Color.GREEN);
+            }
+            else if (b3.isChecked())
+            {
+                layout.setBackgroundColor(Color.BLUE);
+            }
+            else
+            {
+                layout.setBackgroundColor(Color.WHITE);
+            }
+        }
+        rg.clearCheck();
+    }
 }
