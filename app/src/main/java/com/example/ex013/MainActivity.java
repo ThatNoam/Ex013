@@ -1,5 +1,6 @@
 package com.example.ex013;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
@@ -7,18 +8,35 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Switch;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
+
+    Switch sw;
+    RadioButton b1, b2, b3, b4;
+    RadioGroup rg;
+    LinearLayout layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        sw = findViewById(R.id.switch1);
+        layout = findViewById(R.id.layout);
+        b1 = findViewById(R.id.radioButton);
+        b2 = findViewById(R.id.radioButton2);
+        b3 = findViewById(R.id.radioButton3);
+        b4 = findViewById(R.id.radioButton4);
+        rg = findViewById(R.id.toggleButton);
+
     }
+
+
 }
